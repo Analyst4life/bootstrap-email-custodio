@@ -1,0 +1,15 @@
+# macOS system file
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment variables (secrets)
+.env
