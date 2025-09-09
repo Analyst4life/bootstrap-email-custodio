@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile-friendly -->
+  <title>Simple Email App</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="final-style.css">
+</head>
+<body>
+
+  <!-- STATUS BAR -->
+  <div class="status-bar">
+    <div class="status-left">9:41 AM</div> <!-- Time -->
+    <div class="status-right">
+      <div class="status-wifi"></div>      <!-- Wi-Fi -->
+      <div class="status-cellular"></div>  <!-- Cellular -->
+      <div class="status-battery"></div>   <!-- Battery -->
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- SIDE NAV -->
+      <div class="col-12 col-md-2 side-menu">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#">Inbox</a></li>
+          <li><a href="#">Starred</a></li>
+          <li><a href="#">Sent</a></li>
+          <li><a href="#">Drafts</a></li>
+          <li><a href="#">Spam</a></li>
+          <li><a href="#">Trash</a></li>
+        </ul>
+      </div>
+
+      <!-- EMAIL LIST -->
+      <div class="col-12 col-md-3">
+        <h3>Inbox</h3>
+
+        <div class="email-item">
+          <span class="email-subject">Weekly Newsletter</span>
+          <span class="email-time">Yesterday</span>
+          <div>Check out the latest updates...</div>
+        </div>
+
+        <div class="email-item">
+          <span class="email-subject">Order Shipped</span>
+          <span class="email-time">Sep 8</span>
+          <div>Your order #12345 is on the way...</div>
+        </div>
+
+        <div class="email-item read-email">
+          <span class="email-subject">Meeting Reminder</span>
+          <span class="email-time">2 days ago</span>
+          <div>Team sync tomorrow at 10 AM...</div>
+        </div>
+      </div>
+
+      <!-- OPENED EMAIL -->
+      <div class="col-12 col-md-7">
+        <div class="email-opened">
+          <h5>Help with Data Analysis Task</h5>
+          <small>From: you@example.com | 9:00 AM</small>
+          <hr>
+          <p>Hi [Jenny],</p>
+          <p>I’m working on a data analysis task and need a bit of guidance. Could you help me out?</p>
+          <p>Thanks,<br>[Nette]</p>
+
+          <!-- Reply & Forward Buttons -->
+          <div class="email-actions">
+            <button class="email-action-btn reply-btn">Reply</button>
+            <button class="email-action-btn forward-btn">Forward</button>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- End row -->
+  </div> <!-- End container -->
+
+  <!-- COMPOSE BUTTON -->
+  <button class="compose-btn-pill">Compose</button>
+
+</body>
+</html>
