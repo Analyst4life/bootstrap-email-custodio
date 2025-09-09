@@ -1,5 +1,101 @@
-<html>
-    <body>
-        <p>Hello World!</p>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Email App</title>
+<style>
+/* ===== STATUS BAR ===== */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffeccc;
+  padding: 5px 10px;
+}
+.status-left { font-weight: bold; }
+.status-right div {
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  display: inline-block;
+}
+.status-wifi { background: blue; }
+.status-cellular { background: green; }
+.status-battery { background: red; }
+
+/* ===== SIDE NAV ===== */
+.side-menu {
+  background: #fff8f0;
+  padding: 10px;
+  margin-top: 10px;
+}
+.side-menu ul { list-style: none; padding: 0; }
+.side-menu ul li a { text-decoration: none; display: block; padding: 5px; color: #000; }
+
+/* ===== EMAIL LIST ===== */
+.email-item { border-bottom: 1px solid #ccc; padding: 10px; }
+.email-item .subject { font-weight: bold; }
+
+/* ===== OPENED EMAIL ===== */
+.email-opened { border: 1px solid #ccc; padding: 10px; margin-top: 10px; background: #f9f9f9; }
+
+/* ===== COMPOSE BUTTON ===== */
+.compose-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 8px 15px;
+  background: lightblue;
+  border: none;
+  border-radius: 20px;
+}
+</style>
+</head>
+<body>
+
+<!-- STATUS BAR -->
+<div class="status-bar">
+  <div class="status-left">9:41 AM</div>
+  <div class="status-right">
+    <div class="status-wifi"></div>
+    <div class="status-cellular"></div>
+    <div class="status-battery"></div>
+  </div>
+</div>
+
+<div style="display:flex; margin-top:10px;">
+  <!-- SIDE NAV -->
+  <div class="side-menu" style="width:150px;">
+    <ul>
+      <li><a href="#">Inbox</a></li>
+      <li><a href="#">Sent</a></li>
+      <li><a href="#">Trash</a></li>
+    </ul>
+  </div>
+
+  <!-- EMAIL LIST -->
+  <div style="flex:1; margin-left:10px;">
+    <div class="email-item">
+      <div class="subject">Weekly Newsletter</div>
+      <div>Check out latest updates...</div>
+    </div>
+    <div class="email-item">
+      <div class="subject">Order Shipped</div>
+      <div>Your order #12345 is on the way...</div>
+    </div>
+  </div>
+
+  <!-- OPENED EMAIL -->
+  <div style="flex:2; margin-left:10px;">
+    <div class="email-opened">
+      <div class="subject">Help with Data Analysis Task</div>
+      <div>Hi Jenny, I need guidance on a data task...</div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPOSE BUTTON -->
+<button class="compose-btn">Compose</button>
+
+</body>
 </html>
